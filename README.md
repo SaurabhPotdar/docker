@@ -3,8 +3,10 @@
 ## [Reference](https://spring.io/guides/topicals/spring-boot-docker/#a-better-dockerfile)
 
 ## Multistage builds
+
 The container will not have demo.jar as the second stage only copies the necessary folders
-```
+
+```Dockerfile
 #Use JDK for building project
 FROM eclipse-temurin:17-jdk-alpine as builder
 WORKDIR /application
@@ -29,6 +31,7 @@ ENTRYPOINT [ "sh", "-c", "java -Dspring.profiles.active=${profile} org.springfra
 ```
 
 ## Build without Dockerfile
+
 1. Buildpacks
 2. bootBuildImage - available for Spring Boot 2.3+
 3. Jib plugin from Google - Faster build
