@@ -141,3 +141,11 @@ One host is the manager and other hosts are workers. Manager distributes the wor
 ### Kubernetes
 
 Kubernetes is a container orchestration tool that manages containers in a cluster. It provides features like scaling, load balancing, self-healing, etc.
+
+## Docker vs Containerd
+
+Containerd is an open-source Container runtime originally developed by Docker. A Container runtime sits at the heart of any container service such as Docker. It is a daemon (background) process responsible for managing Container creation tasks such as pulling images from repositories, resource and storage allocation, network creation, etc
+
+All the images are OCI compliant and can be run on any OCI compliant runtime like containerd, cri-o, etc.
+
+Containerd is only a low-level runtime, Docker is a complete Container management service that includes image-building utilities, an interface for easy accessibility, and a built-in runtime. At its heart, Docker also uses Containerd for Container management, but its additional perks, such as Docker Hub and Compose, set it apart from the latter.
